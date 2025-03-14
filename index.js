@@ -155,6 +155,10 @@ function makeWindowDraggable(windowEl) {
   header.addEventListener('touchstart', startDrag);
 
   function startDrag(e) {
+    if (e.target.closest('.window-controls button')) {
+      return; // Don't prevent default if it's a control button
+    }
+  
     if (e.type === 'mousedown') {
       offsetX = e.clientX - windowEl.getBoundingClientRect().left;
       offsetY = e.clientY - windowEl.getBoundingClientRect().top;
@@ -599,9 +603,9 @@ function showError(title, message) {
   errorWindow.className = 'window';
   errorWindow.style.width = '300px';
   errorWindow.style.height = '200px';
-  errorWindow.style.left = '50%';
-  errorWindow.style.top = '50%';
-  errorWindow.style.transform = 'translate(-50%, -50%)';
+  errorWindow.style.left = '40%';
+  errorWindow.style.top = '40%';
+  // errorWindow.style.transform = 'translate(-50%, -50%)';
   errorWindow.style.zIndex = '9999';
 
   errorWindow.innerHTML = `
