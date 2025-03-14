@@ -1,0 +1,469 @@
+/* Global Styles */
+:root {
+  --win95-gray: #c0c0c0;
+  --win95-dark-gray: #808080;
+  --win95-darker-gray: #404040;
+  --win95-blue: #000080;
+  --win95-white: #ffffff;
+  --win95-black: #000000;
+  --win95-teal: #008080;
+  --win95-border: 2px solid var(--win95-black);
+  --win95-shadow-outer: inset -1px -1px 0px var(--win95-black), inset 1px 1px 0px var(--win95-white);
+  --win95-shadow-inner: inset -1px -1px 0px var(--win95-white), inset 1px 1px 0px var(--win95-black);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'MS Sans Serif', 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background-color: var(--win95-teal);
+  color: var(--win95-black);
+  overflow-x: hidden;
+  padding: 8px;
+}
+
+/* Windows 95 Button Styles */
+.win95-btn {
+  background-color: var(--win95-gray);
+  border: none;
+  box-shadow: var(--win95-shadow-outer);
+  padding: 6px 10px;
+  margin: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--win95-black);
+  position: relative;
+  font-weight: normal;
+}
+
+.win95-btn:active,
+.win95-btn.active {
+  box-shadow: var(--win95-shadow-inner);
+  padding-top: 7px;
+  padding-left: 11px;
+  padding-bottom: 5px;
+  padding-right: 9px;
+}
+
+/* Windows 95 Window Styles */
+.window {
+  position: absolute;
+  background-color: var(--win95-gray);
+  border: var(--win95-border);
+  box-shadow: var(--win95-shadow-outer);
+  resize: both;
+  overflow: hidden;
+  min-width: 200px;
+  min-height: 150px;
+  z-index: 1;
+}
+
+.window-header {
+  background-color: var(--win95-blue);
+  color: var(--win95-white);
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  user-select: none;
+}
+
+.window-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.window-controls {
+  display: flex;
+}
+
+.window-controls button {
+  width: a;
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
+  background-color: var(--win95-gray);
+  border: var(--win95-border);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.window-body {
+  padding: 8px;
+  overflow: auto;
+  max-height: calc(100% - 30px);
+  height: calc(100% - 30px);
+}
+
+/* Desktop Icons */
+.desktop-icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--win95-white);
+  text-shadow: 1px 1px 1px var(--win95-black);
+}
+
+.desktop-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon-img {
+  width: 48px;
+  height: 48px;
+  background-color: var(--win95-gray);
+  border: var(--win95-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  color: var(--win95-black);
+  text-shadow: none;
+  font-size: 24px;
+}
+
+.icon-text {
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Taskbar */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: var(--win95-gray);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--win95-shadow-outer);
+  z-index: 1000;
+}
+
+
+.start-btn {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-left: 4px;
+}
+
+.start-btn img {
+  width: 24px;
+  margin-right: 4px;
+}
+
+.taskbar-items {
+  display: flex;
+  flex-grow: 1;
+}
+
+.taskbar-item {
+  min-width: 120px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clock {
+  margin-right: 8px;
+  padding: 4px;
+  box-shadow: var(--win95-shadow-inner);
+  font-size: 14px;
+}
+
+/* About Me Section */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border: var(--win95-border);
+  box-shadow: var(--win95-shadow-outer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+  background-color: var(--win95-white);
+}
+
+/* Project Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 10px;
+}
+
+.project-card {
+  background-color: var(--win95-white);
+  border: var(--win95-border);
+  box-shadow: var(--win95-shadow-outer);
+  padding: 8px;
+}
+
+.project-title {
+  background-color: var(--win95-blue);
+  color: var(--win95-white);
+  padding: 4px;
+  margin-bottom: 8px;
+}
+
+/* Skills Section */
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-group {
+  border: var(--win95-border);
+  background-color: var(--win95-white);
+  padding: 8px;
+}
+
+.skill-group h3 {
+  margin-bottom: 8px;
+}
+
+.skill-bar {
+  background-color: var(--win95-white);
+  border: var(--win95-border);
+  box-shadow: var(--win95-shadow-inner);
+  height: 20px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: var(--win95-blue);
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+input,
+textarea {
+  border: var(--win95-border);
+  box-shadow: var(--win95-shadow-inner);
+  background-color: var(--win95-white);
+  padding: 6px;
+}
+
+/* Start Menu */
+.start-menu {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  width: 250px;
+  background-color: var(--win95-gray);
+  border: var(--win95-border);
+  box-shadow: var(--win95-shadow-outer);
+  display: none;
+  z-index: 1001;
+}
+
+.start-menu.active {
+  display: block;
+}
+
+.start-header {
+  background-color: var(--win95-blue);
+  color: var(--win95-white);
+  padding: 8px;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+}
+
+.start-items {
+  padding-left: 40px;
+}
+
+.start-item {
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.start-item:hover {
+  background-color: var(--win95-blue);
+  color: var(--win95-white);
+}
+
+.start-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: var(--win95-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--win95-white);
+}
+
+/* Project Details Window */
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.project-screenshot {
+  width: 100%;
+  height: 300px;
+  background-color: var(--win95-white);
+  border: var(--win95-border);
+  box-shadow: var(--win95-shadow-inner);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.project-info-label {
+  font-weight: bold;
+}
+
+/* Game Styles */
+.game-container {
+  width: 100%;
+  height: 300px;
+  border: var(--win95-border);
+  box-shadow: var(--win95-shadow-inner);
+  background-color: var(--win95-black);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.game-paddle {
+  width: 80px;
+  height: 15px;
+  background-color: var(--win95-white);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.game-ball {
+  width: 15px;
+  height: 15px;
+  background-color: var(--win95-white);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.game-brick {
+  height: 20px;
+  background-color: var(--win95-gray);
+  position: absolute;
+  border: 1px solid var(--win95-black);
+}
+
+.game-score {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--win95-white);
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .window {
+    width: 95vw !important;
+    left: 2.5vw !important;
+    top: 50px !important;
+    height: calc(100vh - 100px) !important;
+  }
+
+  .desktop-icons {
+    justify-content: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-paddle {
+    width: 60px;
+  }
+}
+
+.btn-maximize {
+  padding-bottom: 4px;
+}
+
+.project-img {
+  object-fit: contain;
+  width: 100%;
+  height: 300px;
+}
+
+.project-img-rg {
+  width: 100%;
+  height: 50px;
+}

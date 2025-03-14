@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahsan Shibghotullah Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <!-- Desktop Icons -->
+    <div class="desktop-icons">
+      <div class="desktop-icon" onclick="openWindow('about')">
+        <div class="icon-img">👤</div>
+        <div class="icon-text">About Me</div>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('projects')">
+        <div class="icon-img">📁</div>
+        <div class="icon-text">Projects</div>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('skills')">
+        <div class="icon-img">🛠️</div>
+        <div class="icon-text">Skills</div>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('contact')">
+        <div class="icon-img">✉️</div>
+        <div class="icon-text">Contact</div>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('readme')">
+        <div class="icon-img">📝</div>
+        <div class="icon-text">README.txt</div>
+      </div>
+      <div class="desktop-icon" onclick="openWindow('game')">
+        <div class="icon-img">🎮</div>
+        <div class="icon-text">Minigame</div>
+      </div>
+    </div>
+
+    <!-- Windows -->
+    <div id="about" class="window"
+      style="width: 500px; height: 500px; left: 100px; top: 50px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">About Me - Profile.exe</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('about')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('about')">□</button>
+          <button onclick="closeWindow('about')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="about-content">
+          <div class="profile-pic">👤</div>
+          
+            <h2>Ahsan Shibghotullah</h2>
+            <p>Senior Software Engineer with 7+ years of experience</p>
+            <hr>
+            <p>Welcome to my Windows 95-themed portfolio! I'm a software engineer specializing in web and backend development, with a passion for building simple, intuitive, and engaging user experiences. With expertise in modern technologies like Next.js, React Native, and Python, I bring a practical and user-focused approach to every project.</p>
+
+            <p>My journey in software development began in 2017, and since then, I've collaborated with diverse clients across industries—ranging from agile startups to established enterprises like Pret.co.uk.</p>
+
+            <p>When I'm not coding, you can find me playing football, watching matches, catching up on the latest football news, or enjoying the simplicity of retro computing and classic video games.</p>
+
+          <div style="margin-top: 20px;">
+            <button class="win95-btn" onclick="openWindow('contact')">Contact Me</button>
+            <button class="win95-btn" onclick="openWindow('projects')">View Projects</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="window"
+      style="width: 600px; height: 450px; left: 150px; top: 100px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">My Projects - Explorer.exe</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('projects')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('projects')">□</button>
+          <button onclick="closeWindow('projects')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-title">Pret.co.uk</div>
+            <p>Optimized web, improved APIs, managed CMS, scaled subscriptions.</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('pret')">View
+              Details</button>
+          </div>
+          <div class="project-card">
+            <div class="project-title">CRM Ruangguru</div>
+            <p>Built CRM, migrated to TypeScript, supported 30M users.</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('crm-ruangguru')">View
+              Details</button>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Image Processing and Automate Input</div>
+            <p>Built Python tool reducing manual input by 95%, 3 days → 6 hours.</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('python')">View
+              Details</button>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Cicle.app</div>
+            <p>Built interactive UI with React, improved performance, boosted engagement.</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('cicle')">View
+              Details</button>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Flip.id Mobile Apps</div>
+            <p>Redesigned home, built payment animations, improved support, 4.9★ rating.</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('flip')">View
+              Details</button>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Alfamind Mobile Apps</div>
+            <p>Optimized UI, enhanced logic, supported successful market launch.</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('alfamind')">View
+              Details</button>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Klikcoaching Mobile and Web Apps</div>
+            <p>Built educational apps, improved UX and performance across platforms.</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('klikcoaching')">View
+              Details</button>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Vehicle Test Apps</div>
+            <p> Built a desktop app for government transportation vehicle testing.</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('kir')">View
+              Details</button>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Portfolio Website</div>
+            <p>Windows 95-themed portfolio showcasing retro design principles</p>
+            <button class="win95-btn" style="margin-top: 10px;" onclick="openProjectDetails('portfolio')">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="skills" class="window"
+      style="width: 550px; height: 400px; left: 200px; top: 150px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">My Skills - ControlPanel.exe</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('skills')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('skills')">□</button>
+          <button onclick="closeWindow('skills')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="skills-content">
+          <div class="skill-group">
+            <h3>Frontend Development</h3>
+            <div>HTML5/CSS3</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+
+            <div>JavaScript/TypeScript</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+
+            <div>React.js</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%;"></div>
+            </div>
+
+            <div>React Native</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 78%;"></div>
+            </div>
+
+            <div>Next.js</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+
+            <div>Electron.js</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 65%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>UI/UX Design</h3>
+            <div>Responsive Design</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 88%;"></div>
+            </div>
+
+
+            <div>Figma</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 65%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Other Skills</h3>
+            <div>Git/Version Control</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+
+            <div>Node.js</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+
+            <div>Python</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%;"></div>
+            </div>
+
+            <div>Ruby on Rails</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 50%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <div>Datadog</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 50%;"></div>
+            </div>
+
+            <div>GCP</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%;"></div>
+            </div>
+
+            <div>Auth0</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%;"></div>
+            </div>
+
+            <div>Contentful</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%;"></div>
+            </div>
+
+            <div>Commercetools</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 40%;"></div>
+            </div>
+
+            <div>Snyk</div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 60%;"></div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="window"
+      style="width: 500px; height: 400px; left: 250px; top: 200px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Contact Me - Mail.exe</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('contact')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('contact')">□</button>
+          <button onclick="closeWindow('contact')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="contact-form">
+          <h2>Get In Touch</h2>
+          <p>Fill out the form below to send me a message to albarkahdev@gmail.com :</p>
+
+          <div class="form-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="your.email@example.com">
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="What's this about?">
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message:</label>
+            <textarea id="message" rows="5" placeholder="Your message here..."></textarea>
+          </div>
+
+          <button class="win95-btn" onclick="sendMessage()">Send Message</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="readme" class="window"
+      style="width: 450px; height: 350px; left: 300px; top: 100px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">README.txt - Notepad</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('readme')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('readme')">□</button>
+          <button onclick="closeWindow('readme')">✕</button>
+        </div>
+      </div>
+      <div class="window-body" style="font-family: monospace; white-space: pre-line;">
+        WINDOWS 95 PORTFOLIO - README.txt
+        =================================
+
+        Welcome to my Windows 95-themed portfolio website!
+
+        FEATURES:
+        - Draggable windows
+        - Minimize/maximize/close functionality
+        - Start menu
+        - Taskbar with clock
+        - Fully responsive design
+        - Breakout minigame (try it!)
+        - Detailed project views
+
+        INSTRUCTIONS:
+        - Click on desktop icons to open windows
+        - Drag windows by their title bars
+        - Use the taskbar to switch between open windows
+        - Click the Start button to access the menu
+
+        This portfolio is built with vanilla HTML, CSS, and JavaScript.
+        No frameworks were harmed in the making of this website.
+
+        © 2025 Ahsan Shibghotullah - All rights reserved
+      </div>
+    </div>
+
+    <!-- Game Window -->
+    <div id="game" class="window"
+      style="width: 500px; height: 450px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Breakout Game - Games.exe</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('game')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('game')">□</button>
+          <button onclick="closeWindow('game')">✕</button>
+
+
+        </div>
+      </div>
+      <div class="window-body">
+        <h3>Breakout Game</h3>
+        <p>Use left/right arrow keys or touch to move the paddle. Break all the blocks to win!</p>
+        <div class="game-container" id="game-container">
+          <div class="game-score" id="game-score">Score: 0</div>
+          <div class="game-paddle" id="game-paddle"></div>
+          <div class="game-ball" id="game-ball"></div>
+          <!-- Bricks will be generated by JS -->
+        </div>
+        <div class="game-controls">
+          <button class="win95-btn" id="start-game">Start Game</button>
+          <button class="win95-btn" id="pause-game">Pause</button>
+          <button class="win95-btn" id="reset-game">Reset</button>
+        </div>
+        <div style="margin-top: 10px;">
+          <p>Controls: Left/Right Arrow Keys or Touch/Click</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Detail Windows -->
+    <div id="pret-details" class="window"
+      style="width: 550px; height: 600px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Pret.co.uk - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('pret-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('pret-details')">□</button>
+          <button onclick="closeWindow('pret-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="project-details">
+          <h2>Pret.co.uk</h2>
+
+          <div class="project-screenshot">
+            <img class="project-img" src="assets/pret.png" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>Pret A Manger</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>Feb 2023 - Feb 2025</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div>React JS, Figma, Next JS, Auth0, GCP, Contentful, CommerceTools, Braze, Datadog, Chargebee</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>Senior Software Engineer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>Pret.co.uk is a UK-based company specializing in fresh, organic, and sustainable food and beverages, offering quick meals through both physical stores and an online platform. I worked on their web platform using Next.js, React.js, and TypeScript, optimizing web performance with Lighthouse, diagnosing issues with GCP Log Explorer, and enhancing API efficiency. Additionally, I managed CMS (Contentful), handled authentication with Auth0, and supported Pret’s subscription service scalability.​</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Optimized Client Apps: Managed applications across regions and languages.</li>
+            <li>Issue Diagnosis: Used GCP Log Explorer to improve system reliability.</li>
+            <li>Test-Driven Development: Wrote unit tests with Jest for robust code.</li>
+            <li>CMS & Auth: Handled Contentful management and Auth0 authorization.</li>
+            <li>Code Quality: Conducted reviews to maintain high code standards.</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div id="crm-ruangguru-details" class="window"
+      style="width: 550px; height: 600px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">CRM Ruangguru - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('crm-ruangguru-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('crm-ruangguru-details')">□</button>
+          <button onclick="closeWindow('crm-ruangguru-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="project-details">
+          <h2>CRM Ruangguru</h2>
+
+          <div class="project-screenshot">
+            <img class="project-img-rg" src="assets/rg.svg" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>PT Ruang Raya Indonesia</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>Nov 2021 - Oct 2022</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div>React JS, Figma, Ruby on Rails, ReasonML, Next JS, MySQL</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>Frontend Engineer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>Ruangguru is a leading Indonesian edtech company offering online learning solutions, tutoring, and educational content for students. At Ruangguru, I developed and maintained CRM applications, transitioning from ReasonML to TypeScript, and built an Admin Dashboard using Ruby on Rails. My contributions helped support the platform’s growth to 30 million active users between 2021 and 2022.</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Developed CRM apps, transitioned from ReasonML to TypeScript.</li>
+            <li>Built Admin Dashboard with Ruby on Rails, optimized performance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="python-details" class="window"
+      style="width: 550px; height: 600px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Image Processing - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('python-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('python-details')">□</button>
+          <button onclick="closeWindow('python-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="project-details">
+          <h2>Image Processing</h2>
+
+          <div class="project-screenshot">
+            <div style="text-align: center;">
+              <div style="font-size: 48px;">🖥️</div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>Freelance</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>Oct 2022 - Feb 2025</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div>Python, cv2, numpy, groupby, PyQt5, pyautogui</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>Senior Software Engineer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>I have built a desktop app that reads user answers from scanned paper and inputs them into another application using automation I created with Python. It includes image preprocessing, OCR, shape detection, color detection, line alignment, PDF processing, image enhancement, and automated user input. It reduces manual processing by approximately 95% and significantly decreases processing time—previously, processing 300 papers took around three days, but my solution completes it in just six hours. I have also built applications for organizations, including a landing page, user management, and event management. Lastly, I developed an inspection application for a private company.</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Automated user answer input from scanned papers using Python.</li>
+            <li>Optimized image processing with OCR, shape/color detection, and alignment.</li>
+            <li>Reduced processing time by 95%, completing tasks in 6 hours.</li>
+            <li>Developed landing pages, user management, and event management apps.</li>
+            <li>Built an inspection application for a private company.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="cicle-details" class="window"
+      style="width: 550px; height: 600px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Cicle App - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('cicle-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('cicle-details')">□</button>
+          <button onclick="closeWindow('cicle-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="project-details">
+          <h2>Cicle App</h2>
+
+          <div class="project-screenshot">
+            <img class="project-img" src="assets/cicle.png" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>Cilsy Fiolution</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>May 2021 - Nov 2021</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div>React JS, Figma</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>Frontend Engineer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>At Cicle.app, I integrated third-party web services to enhance application functionality, adopted new front-end programming languages and methodologies to improve performance, and translated static design files into clean, accessible, and interactive user experiences. I focused on optimizing the app for maximum speed and scalability, recommending and implementing performance improvements. Throughout the development process, I used React.js, Redux, and React Context to build a responsive, efficient application that supports team collaboration and task management.</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Integrated Third-Party Services: Improved app functionality with external services.</li>
+            <li>Adopted New Technologies: Applied new front-end languages and methods.</li>
+            <li>Translated Designs to UI: Converted designs into clean, interactive UIs.</li>
+            <li>Optimized Performance: Focused on speed and scalability.</li>
+            <li>Implemented Improvements: Applied performance enhancements for efficiency.</li>
+            <li>Used React.js, Redux, and React Context: Built robust apps with modern tools.</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="flip-details" class="window"
+      style="width: 550px; height: 600px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Flip.id Mobile Apps - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('flip-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('flip-details')">□</button>
+          <button onclick="closeWindow('flip-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="project-details">
+          <h2>Flip.id Mobile Apps</h2>
+
+          <div class="project-screenshot">
+            <img class="project-img" src="assets/flip.png" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>PT Fliptech Lentera Inspirasi Pertiwi</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>June 2020 - Dec 2020</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div>React Native, Figma, Git</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>Mobile Application Developer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>I contributed to the redesign of the home screen and developed payment animations for Flip’s mobile apps. Additionally, I created a help screen to improve user support, enhancing the overall user experience. My work involved using React Native and Figma, focusing on UI and logic improvements. These contributions helped maintain a 4.9-star rating on Android by improving the app’s functionality and user interface.</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Redesigned Home Screen: Improved UI and layout for better user experience.</li>
+            <li>Developed Payment Animations: Enhanced payment flow with smooth, engaging animations.</li>
+            <li>Created Help Screen: Developed a support screen to assist users effectively.</li>
+            <li>Used React Native and Figma: Leveraged modern tools to build responsive, user-friendly designs.</li>
+            <li>Maintained 4.9-Star Rating: Contributed to Flip’s high rating through UI and logic improvements.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="alfamind-details" class="window"
+      style="width: 550px; height: 600px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Alfamind Mobile Apps - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('alfamind-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('alfamind-details')">□</button>
+          <button onclick="closeWindow('alfamind-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="project-details">
+          <h2>Alfamind Mobile Apps</h2>
+
+          <div class="project-screenshot">
+            <img class="project-img" src="assets/alfamind.png" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>Mindstores</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>Sep 2019 - May 2020</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div>React Native, Figma, Git</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>Mobile Application Developer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>I maintained and upgraded the software for a local marketplace app, focusing on improving the UI and logic of the Alfamind mobile app. Using React Native and Figma, I contributed to the development and optimization of the app, playing a key role in its successful market launch.</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Maintained and Upgraded Software: Improved functionality and user experience for the marketplace app.</li>
+            <li>Used React Native and Figma: Utilized modern technologies for building and designing the app.</li>
+            <li>Optimized UI and Logic: Contributed to the development and optimization of Alfamind's app.</li>
+            <li>Supported Market Launch: Played a key role in the successful launch of the Alfamind mobile app.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="klikcoaching-details" class="window"
+      style="width: 550px; height: 600px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Klikcoaching Web, Mobile Apps and API - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('klikcoaching-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('klikcoaching-details')">□</button>
+          <button onclick="closeWindow('klikcoaching-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="project-details">
+          <h2>Klikcoaching Web, Mobile Apps and API</h2>
+
+          <div class="project-screenshot">
+            <img class="project-img" src="assets/klikcoaching.png" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>Comtelindo</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>Jun 2018 - Sep 2019</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div>React Native, React JS, MongoDB, GraphQL, and Node JS</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>FullStack Developer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>I built and maintained KlikCoaching, a platform for mentees to learn from mentors in preparation for attending university abroad, as well as Mobile Skola. I developed web application databases and used technologies like React Native, React JS, MongoDB, GraphQL, and Node JS. These contributions enhanced the mobile and web platforms, improving user experience and performance.</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Built and Maintained KlikCoaching: Developed a platform for mentees preparing for university abroad.</li>
+            <li>Developed Web Databases: Created robust databases to support web applications.</li>
+            <li>Used React Native, React JS, MongoDB, GraphQL, and Node JS: Applied modern technologies in development.</li>
+            <li>Developed KlikCoaching and Mobile Skola: Contributed to enhancing mobile and web platforms.</li>
+            <li>Enhanced User Experience and Performance: Improved usability and platform speed.</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div id="kir-details" class="window"
+      style="width: 550px; height: 600px; left: 180px; top: 120px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Vehicle Test App - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('kir-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('kir-details')">□</button>
+          <button onclick="closeWindow('kir-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="project-details">
+          <h2>Vehicle Test App</h2>
+
+          <div class="project-screenshot">
+            <div style="text-align: center;">
+              <div style="font-size: 48px;">🚗</div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>eMpu</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>Dec 2017 - May 2018</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div> Electron JS, React JS</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>Frontend Developer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>I built a desktop application for UJI KIR (Kelayakan Kendaraan), a government transportation vehicle testing system in Indonesia. The application was designed to streamline the testing process and ensure vehicle safety and compliance.</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Built UJI KIR App: Developed a desktop app for government transportation vehicle testing in Indonesia.</li>
+            <li>Streamlined Vehicle Testing: Optimized the process for vehicle safety and compliance checks.</li>
+            <li>Focused on Government Standards: Designed the app to meet official regulations for vehicle testing.</li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div id="portfolio-details" class="window"
+      style="width: 550px; height: 500px; left: 240px; top: 180px; z-index: 1; display: none;">
+      <div class="window-header">
+        <div class="window-title">Portfolio Website - Project Details</div>
+        <div class="window-controls">
+          <button onclick="minimizeWindow('portfolio-details')">-</button>
+          <button class="btn-maximize" onclick="maximizeWindow('portfolio-details')">□</button>
+          <button onclick="closeWindow('portfolio-details')">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+
+
+        <div class="project-details">
+          <h2>Windows 95 Portfolio</h2>
+
+          <div class="project-screenshot">
+            <div style="text-align: center;">
+              <div style="font-size: 48px;">🖥️</div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-info-label">Client:</div>
+            <div>Personal Project</div>
+
+            <div class="project-info-label">Timeline:</div>
+            <div>December 2023 - January 2024</div>
+
+            <div class="project-info-label">Technologies:</div>
+            <div>HTML5, CSS3, JavaScript, No Frameworks</div>
+
+            <div class="project-info-label">Role:</div>
+            <div>Designer & Developer</div>
+          </div>
+
+          <h3>Project Description:</h3>
+          <p>Created a nostalgic Windows 95-themed portfolio website to showcase my development skills and projects. The
+            website features authentic Windows 95 design elements with modern web functionality.</p>
+
+          <h3>Key Features:</h3>
+          <ul style="margin-left: 20px;">
+            <li>Authentic Windows 95 UI components</li>
+            <li>Draggable and resizable windows</li>
+            <li>Functional taskbar and start menu</li>
+            <li>Breakout minigame easter egg</li>
+            <li>Fully responsive design for all devices</li>
+            <li>No frameworks - pure vanilla code</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+      <div class="start-btn win95-btn" onclick="toggleStartMenu()">
+        <span>Start</span>
+      </div>
+      <div class="taskbar-items" id="taskbar-items">
+        <!-- Taskbar items will be added dynamically -->
+      </div>
+      <div class="clock" id="clock">00:00</div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="start-menu">
+      <div class="start-header">Windows 95</div>
+      <div class="start-items">
+        <div class="start-item" onclick="openWindow('about')">
+          <div class="start-icon">👤</div>
+          About Me
+        </div>
+        <div class="start-item" onclick="openWindow('projects')">
+          <div class="start-icon">📁</div>
+          Projects
+        </div>
+        <div class="start-item" onclick="openWindow('skills')">
+          <div class="start-icon">🛠️</div>
+          Skills
+        </div>
+        <div class="start-item" onclick="openWindow('contact')">
+          <div class="start-icon">✉️</div>
+          Contact
+        </div>
+        <div class="start-item" onclick="openWindow('game')">
+          <div class="start-icon">🎮</div>
+          Minigame
+        </div>
+        <div class="start-item" onclick="openWindow('readme')">
+          <div class="start-icon">📝</div>
+          README.txt
+        </div>
+        <hr>
+        <div class="start-item" onclick="document.location.reload()">
+          <div class="start-icon">🔄</div>
+          Restart
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
