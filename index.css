@@ -200,7 +200,6 @@ body {
 }
 
 .profile-pic {
-  width: 120px;
   height: 120px;
   border: var(--win95-border);
   box-shadow: var(--win95-shadow-outer);
@@ -465,4 +464,10 @@ textarea {
 .project-img-rg {
   width: 100%;
   height: 50px;
+}
+
+.profile-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
